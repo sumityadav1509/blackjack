@@ -20,7 +20,7 @@
 ##################### Hints #####################
 
 #Hint 1: Go to this website and try out the Blackjack game: 
-#   https://games.washingtonpost.com/games/blackjack/
+  # https://games.washingtonpost.com/games/blackjack/
 #Then try out the completed Blackjack project here: 
 #   http://blackjack-final.appbrewery.repl.run
 
@@ -33,11 +33,10 @@
 
 #Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
 #11 is the Ace.
-#cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
 
 #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
-#user_cards = []
-#computer_cards = []
+
 
 #Hint 6: Create a function called calculate_score() that takes a List of cards as input 
 #and returns the score. 
@@ -58,4 +57,24 @@
 #Hint 13: Create a function called compare() and pass in the user_score and computer_score. If the computer and user both have the same score, then it's a draw. If the computer has a blackjack (0), then the user loses. If the user has a blackjack (0), then the user wins. If the user_score is over 21, then the user loses. If the computer_score is over 21, then the computer loses. If none of the above, then the player with the highest score wins.
 
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
+import random
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10] 
+def deal_card(): 
+  """Returns a random card from the deck"""
+  cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10] 
+  card=random.choice(cards) 
+  return card 
 
+
+user_cards = []
+computer_cards = []
+
+for _ in range(2): 
+  new_card=deal_card() 
+  user_cards.append(new_card) 
+  computer_cards.append(new_card) 
+
+
+def calculate_score(cards):
+  
+  return sum(cards)
